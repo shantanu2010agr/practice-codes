@@ -1,0 +1,388 @@
+<!--  -->
+<!DOCTYPE html>
+<!-- Declarartion of html5 file. -->
+<!-- HTML IS NOT CASE SENSITIVE. -->
+<html lang="en">
+
+<head><!-- For root declarartion of html. -->
+<!-- Adding metadata values, used by browsers and search engines.. -->
+<meta charset="utf-8">
+<meta name="description" content="My Practice webpage">
+<meta name="keywords" content="HTML and its applications">
+<meta name="author" content="Shantanu Agrawal">
+<meta http-equiv="refresh" content="30"> <!-- Refreshing the page after every "x" seconds. -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- For responsive web pages -->
+<!-- BASE element not used here is used to describe the base url of the webpage and accordingly, we can set the target for all upcoming mentioned hyperlinks. -->
+<!-- Nested Elements. -->
+<title>Page Title</title>
+<!-- For adding the meta icon, will be shown in the icon -->
+<link rel="icon" type="image/jpg" href="shantanu2.jpg">
+<!-- Internal CSS, Values being set for h4 headline -->
+<style>
+	h4 {color:blue; background-color: powderblue;}
+	body, div {
+		background-image: url('spiderman.jpg');
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+		background-size: 100% 100%;
+	}
+	table {
+	  width:100%;
+	  border-spacing:5px;
+	}
+	table, th, td {
+	  border: 1px solid black;
+	  border-collapse: collapse;
+	}
+	th, td {
+	  padding: 15px;
+	  text-align: left;
+	}
+	#t01 td:nth-child(even) {
+	  background-color: #eee;
+	}
+	#t01 td:nth-child(odd) {
+	 background-color: #fff;
+	}
+	#t01 th {
+	  background-color: black;
+	  color: white;
+	}
+	#navmenu li{
+		list-style-type: none;
+		float: left;
+		padding: 16px;
+	}
+	.s01 {
+		background-color: green;
+		text-underline-position: under;
+	}
+	.biger {
+		font-size: 200%;
+		text-align: center;
+		padding: 5px;
+	}
+	* {
+	  box-sizing:border-box;
+	}
+	.lefty, .righty, .central {
+	  padding:20px;
+	  float:left;
+	  background-image: none;
+	}
+	.central {
+	  background-color:#f1f1f1;
+	  width:60%; /* The width is 60%, by default */
+	}
+	.righty {
+	  background-color:#4CAF50;
+	  width:20%; /* The width is 20%, by default */
+	}
+	.lefty {
+	  background-color:#2196F3;
+	  width:20%;
+	}
+	/* Use a media query to add a break point at 800px: */
+	@media screen and (max-width:800px) {
+	  .lefty, .central, .righty {
+	    width:100%; /* The width is 100%, when the viewport is 800px or smaller */
+	    height: auto;
+	  }
+	}
+</style>
+<!-- 1.) Internal CSS: -->
+<!-- 2.) Background images: backgroud-size: cover-> image being spread wrt height and height accordingly. -->
+
+<!-- Java scripts -->
+<script>
+	var bot=true;
+	function funct(){
+		if (bot==true){
+			document.getElementById("t01").caption.innerHTML= "Modified Caption";
+			bot = false;
+		}
+		else{
+			document.getElementById("t01").caption.innerHTML= "Modified agin Caption"
+			bot=true;
+		}
+
+	}
+
+	function myFunction(){
+		alert("Hope, it has my face for you.:)");
+	}
+</script>
+
+<noscript>Sorry, browser does not support JavaScript!</noscript>
+</head>
+
+<body>
+<!-- Also to be remembered, URL/ ASCII Encoding. -->
+<!-- Best to use relative file paths as much as possible. -->
+<!-- HTML LAYOUT and TECHNIQUES -->
+<!-- CSS frameworks, Float property (style property), Flexbox, Grid -->
+
+<h1>My First Heading</h1><!-- Heading -->
+<p>My first paragraph.</p><!-- Paragraph -->
+<!-- Use of quotes for any strings used is good. -->
+<a href="https://www.w3schools.com">This is a link for w3schhols for all tutorials, you will need.</a><!-- Links -->
+<p>
+	<picture>
+		<source media="(min-width: 850px)" srcset="shantanu2.jpg">
+	<img src="shantanu.jpg" alt="Bachpan ho toh aisa" width="100" height="70" usemap="#try"><!-- Images --><!-- This can be overriden by the <style> tag in the <head>. -->
+		<map name="try">
+			<area shape="circle" coords="20,20,20" onclick="myFunction()">
+			<area shape="rect" coords="100,100,150,150" href="https://www.google.com" alt="linkChange">
+		</map>
+		<!-- Function shown here is being described under script element, which is made similar to Internal CSS, as it was described under head element. -->
+	</picture>
+
+<img src="shantanu.jpg" alt="Bachpan ho toh aisa" style="width:20%; height:142px;" /><!-- Another way of styling the image. -->
+<!-- Here, style attribute used will override the <style> tag thing that of inside <head> tag. -->
+<!-- "p" tag is one of the tags, which might not require end tags, but we should never skip them. -->
+
+<p style="color:red;">This is a red paragraph.</p><!-- style used inside the tag is the attribute of the used tag. -->
+<p title="I'm a tooltip">This is a paragraph with title.</p>
+<p title='John "ShotGun" Nelson'>What's your name? Find mine.</p>
+<p title="John 'ShotGun' Nelson">Another way of writing my name...</p>
+
+<h1 style="font-size:60px;">Heading 1</h1><!-- Bigger Heading -->
+<p>This paragraph
+<br> <!-- Line Break -->
+contains        a lot of spaces
+in the source         code,
+but the        browser
+ignores it.
+</p>
+<h1>This is heading 1</h1>
+<p>This is some text.</p>
+<hr><!-- Horizontal Rules, to define a change, empty tag. -->
+<h2>This is heading 2</h2>
+<p>This is some other text.</p>
+
+<pre><!-- Preformatted text, preserves sapces and line breaks -->
+  My Bonnie lies over the ocean.
+
+  My Bonnie lies over the sea.
+
+  My Bonnie lies over the ocean.
+
+  Oh, bring back my Bonnie to me.
+</pre><!-- Fixed font type and width... -->
+
+<!-- HTML STYLES -->
+<!-- <tagname style="property:value;">, tc of the not usual ";" sign in the syntax. -->
+<!-- property is CSS property and value is CSS value. -->
+<!-- Style attribute can directly be used with body tag.. i.e, applied for whole document. -->
+<h1 style="background-color:powderblue;">This is a heading</h1>
+<p style="background-color:tomato;">This is a paragraph.</p>
+<p style="color:red;">This is a paragraph.</p>
+<p style="font-family:courier;">This is a paragraph.</p>
+<p style="font-family:verdana;">This is a paragraph.</p>
+<h1 style="font-size:300%;">This is a heading</h1>
+<p style="font-size:160%;">This is a paragraph.</p>
+<p style="text-align:center;">Centered paragraph.</p>
+<p style="text-align:center; color:blue">Multi-styled paragraph.</p>
+
+<p><h5>Some powers of formatting elements in HTML:</h5>
+	<b>bolder you get,</b>  <strong>stronger you become,</strong>
+	<i>italic you need,</i> <em>it gets emphasized</em><!-- usually gets italic, screen reader will give voice stress to it. --> 
+	<mark>marked, it will use,</mark> <!-- Marked or highlighted one, it will use. -->
+	<small>smaller you think,</small><br>
+	My favorite color is <del>blue</del> <ins>red</ins>. <!-- deleted will be striked-through --> <!-- Inserted will be usually underlined --> <br />
+	A mathematical equation: (a<sub>{i,j}</sub>)<sup>2</sup>=2.
+
+<p>
+	<b><strong>Let's see strong+bold.</strong></b>
+	<i><em>Italic and emphasized.</em></i><br />
+	<blockquote cite="http://www.worldwildlife.org/who/index.html">For 50 years, WWF has been protecting the future of nature.
+	</blockquote><!-- section that is quoted from another source. Browsers usually indent <blockquote> elements. -->
+	WWF's goal is to: <q>Build a future where people live in harmony with nature.</q><!-- Quoatations --><br>
+	The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.<!-- Add excess info to the browser, using general title attribute. --><br><br>
+	<address>Written by John Doe.<br>Visit us at:<br>Example.com<br>Box 564, Disneyland<br>USA</address><!-- Renders in Italic, automatically takes <br> before and after the start of the tag. --><br>
+	<cite>The Scream</cite> by Edvard Munch. Painted in 1893.<br> <!-- Maybe for osme creative work. -->
+	<bdo dir="rtl">This text will be written from right to left</bdo> <!-- Bi-directional over-ride, maybe for other language. rtl or ltr are possibilities..-->
+
+<!-- CSS/HTML Colours -->
+<div style="background-image: url('venom.jpg');">
+	<h4>Changes other than default thing is due to internal CSS thing.</h4>
+
+<h1 style="background-color:DodgerBlue;" id="Colors">Hello World, Time to learn Colors</h1><!-- ID being embedded, which can be accessed later. -->
+<p style="background-color:Tomato;">Background-colors being used.</p>
+<h1 style="color:LightGray;">Hello World</h1>
+<p style="color:SlateBlue;">Lorem ipsum...</p>
+<p style="color:MediumSeaGreen;">Ut wisi enim...</p>
+<h1 style="border:2px solid Gray;">Borders being AdDeD to the ines.</h1>
+<h1 style="border:2px solid Orange; padding: 30px; color: blue;">Hello World with padding.</h1>
+<h1 style="border:2px solid Violet; margin: 50px; color: red;">Hello World with margin.</h1>
+
+<h1 style="background-color:rgb(255, 99, 71);">RGB for red, green, blue..</h1>
+<h1 style="background-color:#ff6347;">HEX values..</h1>
+<h1 style="background-color:hsl(9, 100%, 64%);">HSL (Hue, saturation, light)</h1>
+<h1 style="background-color:rgba(255, 99, 71, 0.8);">RGB+ alpha parameter for opacity</h1>
+<h1 style="background-color:hsla(9, 100%, 64%, 0.5);">HSL + Alpha parameter</h1>
+
+<!-- Shades of gray, often defined using equal values for all three parameters. -->
+<h5 style="background: rgba(140,140,140,0.8);">Shade of a gray</h5>
+</div>
+
+
+<!-- CSS, Internal and Inline (by using style attribute inside every evry required tag.) -->
+
+<!-- Eg., for External CSS used inside the head <link rel="stylesheet" href="styles.css"> -->
+
+
+<h2>Absolute URLs</h2><!-- Relative Links are not possible now: -->
+<!-- Extending it to coloring the links in different states. --> <!-- LINK (given, initially), HOVER, VISITED (link is already used), ACTIVE (when being trying to get visited) -->
+<p>
+	<a href="https://www.w3.org/" target="_parent">W3C</a><br>
+	<a href="https://www.google.com/" target="_top">Google</a>   <br>
+	<!-- <h2>Relative URLs</h2>
+	<p><a href="html_images.asp">HTML Images</a></p> -->
+	<!-- If some other local webpage is added in the same folder. -->
+	<a href="mailto:thedonshantanu@yahoo.in"><img src="image_unknown.jpg" title="Link to Jannat ya Jaroorat, yaani mail karo isko"></a><br>
+	<button onclick="document.location='https://login.iiit.ac.in/cas/login?service=https%3A%2F%2Fims.iiit.ac.in%2Fdo.php%3FMCvDqsPAFyOG14%2BctjSBB6sdFRGtV4etgsJssAFdmqxwJdFhuTKY0nKupZtMURAEGR9pVncjiHVL8QR0eaSJJQ%3D%3D'">Login karo, iitianS</button>
+	<br>Ruko zara, sabr karo<br>
+	<a href="#Colors">Again learn Css/Html Colors, you can use it for links as well.</a><!-- for accessing some other page, <a href="{other_page_name}.html#id_value">to change page and hover to get the value.</a> -->
+</p>
+<p>
+	<h3>Including GIFs and that is floating.. WOWWW</h3>
+	<img src="Hi.gif" alt="How is GIF!" style="float:left;width:42px;height:42px;">
+	Paragraph can be made with a floating Gif(s).Paragraph can be made with a floating Gif(s).Paragraph can be made with a floating Gif(s).Paragraph can be made with a floating Gif(s).Paragraph can be made with a floating Gif(s).Paragraph can be made with a floating Gif(s).
+
+
+<h2>Styling Tables</h2>
+<table >
+	<caption>Neighbourhood Knowledge</caption>
+  <tr>
+    <th>Firstname</th>
+    <th>Lastname</th> 
+    <th>Age</th>
+  </tr>
+  <tr>
+    <td colspan="2">Jill R.</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td rowspan="2">Eve</td>
+    <td>Jackson</td>
+    <td>94</td>
+  </tr>
+  <tr>
+    <td>Doe</td>
+    <td>80</td>
+  </tr>
+</table>
+
+<table id="t01">
+  <caption>Monthly savings</caption>
+  <tr>
+    <th>Month</th>
+    <th>Savings</th>
+    <th>Profit</th>
+  </tr>
+  <tr>
+    <td>January</td>
+    <td>$100</td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td>February</td>
+    <td>-$50</td>
+    <td>50</td>
+  </tr>
+  <tr>
+    <td>March</td>
+    <td>$150</td>
+    <td>200</td>
+  </tr>
+  <tr>
+  	<th colspan="2"> Average savings, showing the column spanning</th>
+  	<th>200/3</th>
+  </tr>
+</table><br><!-- Still left to modify table such that every alternate cell is different: -->
+
+
+<!-- Block and Inline Displays, Use of DIV and SPAN TAGS. -->
+<div style="background-color:black; color:white; padding: 20px; background-image: none;">
+	<h3>Block and Inline displays.</h3>
+	<p><span class="s01">Block (uses new line):</span>s article, aside, canvas, fieldset, figcaption, figure, footer, form, header, main, nav, noscript, section, tfoot, video.</p>
+	<!-- Use of classes, which can be used for two elements, instead of only one for id attribute. -->
+	<p><span class="s01 biger">Inline (takes as much width as necessary):</span> acronym, big, cite, code, dfn, input, kbd, object, output, q, samp, script, select, textarea, time, var.<br><br>
+		<a href="#t01">Let's revise the tables again.</a></p>
+	<!-- Use of multiple classes, possible. -->
+</div>
+
+
+<p>
+	<h2> Lists:</h2>
+	<h4>Unordered Lists:</h4>
+	<ul style="list-style-type: circle;">
+		<li>Coffee</li>
+		<li>Tea</li>
+			<ul style="list-style-type: square;">
+				<li>Black Tea</li>
+				<li>Milk Tea</li>
+				<li>Green Tea</li>
+			</ul>
+		<li>Plain Milk</li>
+	</ul>
+	<ul id="navmenu">
+		<li>Home</li>
+		<li>News</li>
+		<li>About</li>
+		<li>Contact</li>
+		<li>Donation</li>
+	</ul>
+	<h3>.</h3><!-- Couldn't able to debug it. -->
+	<ol start="50">
+		<li>Coffee</li>
+		<li>Tea</li>
+			<ol type="i">
+				<li>Black Tea</li>
+				<li>Milk Tea</li>
+				<li>Green Tea</li>
+			</ol>
+		<li>Plain Milk</li>
+	</ol>
+	<h4>Description Lists</h4>
+	<dl>
+	  <dt>Coffee</dt>
+	  <dd>- black hot drink</dd>
+	  <dd>- Maybe 2 or 3 types..</dd>
+	  <dt>Milk</dt>
+	  <dd>- white cold drink</dd>
+	</dl>
+
+	
+	<p style="text-align: center;">IFRame is udes to display another webpage inside your own webpage.<br>
+	<!-- TASK Left: how to make the background white or of required color or image. -->		
+	<iframe src="try.html" style=" margin-left: auto;margin-right: auto; height:600px; width:100%; border: 1px solid red;" name="Another day."></iframe>
+	<h2>Iframe - Target for a Link</h2>
+
+	<iframe height="300px" width="100%" name="iframe_a"></iframe>
+	<p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
+	<p><a href="https://www.google.com" target="iframe_a">Google.com</a></p>
+	<p>When the target of a link matches the name of an iframe, the link will open in the iframe.</p>
+
+
+	<a href="#t01"><button onclick="funct()">Let's use JavaScript too..!!</button></a>
+
+	<h2>Responsive Pages..!!</h2>
+	<img src="shantanu2.jpg" style="width: 100%;">
+	<img src="shantanu.jpg" style="height: auto;max-width: 100% ">
+	<h1 style="font-size:10vw;">Responsive Text</h1>
+	<p style="font-size:5vw;">Resize the browser window to see how the text size scales.</p>
+	<p style="font-size:5vw;color: orange;">Use the "vw" unit when sizing the text. 10vw will set the size to 10% of the viewport width.</p>
+
+	<h2>Media Queries</h2>
+	<div class="lefty"><p>Left Menu</p></div>
+	<div class="central"><p>Main Box</p></div>
+	<div class="righty"><p>Right Content</p></div>
+
+</body>
+
+</html>
+<!--  -->
+<!-- Things left from other file: -->
+<!-- icon link, header, footer, main figure, figcaption (relation with figure), aside, details, summary -->
