@@ -6,7 +6,7 @@ from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as ec
 
-url = 'https://codeforces.com'
+url = 'https://codeforces.com/'
 # Put your codeforces handle here
 username = input("Enter your username:")
 # Put your password here
