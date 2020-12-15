@@ -1,6 +1,7 @@
 // Variables- Immutable and Mutable
 // Arguments- Named and Default
-// Classes
+// Classes (Also Generic)
+// Inheritance
 // 
 
 // // Unit means void function
@@ -21,6 +22,27 @@ fun divident(x: Int, y: Int) : Pair<Int, Int> {
 // fun dividents(x: Int, y: Int) -> (Int, Int) { 
 //     return x+y, x%y
 // }
+
+// Mutable Stack, Generic Classes(Templates)
+class MutableStack<E>(vararg items: E) {              // 1
+  private val elements = items.toMutableList()
+  fun push(element: E) = elements.add(element)        // 2
+  fun peek(): E = elements.last()                     // 3
+  fun pop(): E = elements.removeAt(elements.size - 1)
+  fun isEmpty() = elements.isEmpty()
+  fun size() = elements.size
+  override fun toString() = "MutableStack(${elements.joinToString()})"
+}
+// Generic functions
+// You can also generify functions if their logic is independent of a specific type. 
+// For instance, you can write a utility function to create mutable stacks:
+fun <E> mutableStackOf(vararg elements: E) = MutableStack(*elements)
+
+// Inherited class
+open class Lion(val name: String, val origin: String) {
+    fun sayHello() {
+        println("$name, the lion from $origin says: graoh!")}}
+class Asiatic(name: String) : Lion(name = name, origin = "India") // 1
 
 fun main() {
     printMessage("Hello")                                               // 5                    
@@ -57,8 +79,19 @@ fun main() {
 //     println(B)
     B*=2
 //     println(R to B)
-    println("$R $B")
+    println("$R $B")  
     
+//  Generic function/class use..
+    val stack = mutableStackOf(0.62, 3.14, 2.7)
+    println(stack)
+    println(stack.pop())
+    stack.push(2.87)
+    println(stack.size())
+    
+//  Example for inheritance
+    val lion: Lion = Asiatic("Rufo")                             
+    lion.sayHello()
+
 //  Operator function (a upgrade) can be used to replace function names with the keywords
 //  (corresponding to it).....
     operator fun Int.times(str: String) = str.repeat(this)       // 1
@@ -80,6 +113,31 @@ fun main() {
         "Hello", "Hallo", "Salut", "Hola", "你好",
         prefix = "Greeting: "                                          // 4
     )
+    
+//     Null safety...
+    var neverNull: String = "This can't be null"            // 1
+//     neverNull = null   (since it is non-nullable string)  // 2
+
+    var nullable: String? = "You can keep a null here"      // 3
+    nullable = null                                         // 4
+
+    var inferredNonNull = "The compiler assumes non-null"   // 5
+//     inferredNonNull = null  //(since it is non-nullable string) // 6
+
+    fun strLength(notNull: String): Int {                   // 7
+        return notNull.length
+    }
+    println(strLength(neverNull))                             // 8
+//     strLength(nullable) (notPossible because function doesn't exist for nullable string)
+
+    fun describeString(maybeString: String?): String {              // 1
+        if (maybeString != null && maybeString.length > 0) {        // 2
+            return "String of length ${maybeString.length}"
+        } else {
+            return "Empty or null string"                           // 3
+        }
+    }
+    println(describeString(nullable))
 }
 
 // Class check
