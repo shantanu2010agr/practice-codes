@@ -1,7 +1,15 @@
 // import logo from './logo.svg';
 // Not using hence marked as comment
+
 import './App.css';
-import Greet from './components/Greet';
+
+// "Mine" is the constant (HTML) as exported from Greet.js file.
+import {Mine} from './components/Greet'
+//  Otherwise "{Mine}" can be replaced with anything or any of the name (default case). like below:
+import Welcomet from './components/Welcome'
+import Message from './components/Message'
+import Hello from './components/Hello'
+import HellonJSX from './components/HellonJSX'
 
 function App() {
   return (
@@ -22,10 +30,30 @@ function App() {
           Learn React
         </a>
       </header> */}
+      
       {/* Importing newly created component */}
-      <Greet />
-      {/* or can be shown as <Greet></Greet> */}
-    </div>
+      <Mine name="" heroName=""/>
+      {/* Here, properties are surely known in the form of format or type, hence can be passed as attributes */}
+      <Mine name="JaiDeep"/>
+      <Mine heroName="Shiv Shambu"> 
+      {/* But here, the property was dynamic or not-known about, 
+      hence was added as HTML code in between the component's opening and closing tags. */}
+      {/* Adding a children prop is as followed: */}
+        <p>This is for children props.</p>
+      </Mine>
+      
+      {/* or can be shown as <Greet></Greet> like below*/}
+      <Welcomet name="Bruce" heroName="Batman">
+        <button>Gotham Calling..</button>
+      </Welcomet>
+      <Welcomet name="Clark" heroName="Superman" />
+
+      {/* Using states of the classes: */}
+      <Message />
+
+      <Hello />
+      <HellonJSX />
+     </div>
   );
 }
 
