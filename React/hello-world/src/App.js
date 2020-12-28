@@ -10,6 +10,7 @@ import Welcomet from './components/Welcome'
 import Message from './components/Message'
 import Hello from './components/Hello'
 import HellonJSX from './components/HellonJSX'
+import Counter from './components/Counter';
 
 function App() {
   return (
@@ -50,6 +51,8 @@ function App() {
 
       {/* Using states of the classes: */}
       <Message />
+      {/* defining setState and state methods in detatil */}
+      <Counter />
 
       <Hello />
       <HellonJSX />

@@ -25,3 +25,6 @@
 * Differnce betwwen dynamic and non-dynamic props, and how they are presented in both types of components.
 * Props are immutable, they can't be changed.
 * State (of Class Component, and state Hooks for Functional Component) solves the above problem as some of the values might change over the time.
+* Implementation of state and changes in it. (??) (to understand more abt it)
+* Do's and Dont's for setState and State methods mentioned in the imnplementation above.
+* Summary for showing things to be cared about: (**Photo**)
