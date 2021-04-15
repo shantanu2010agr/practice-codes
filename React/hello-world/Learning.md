@@ -28,3 +28,9 @@
 * Implementation of state and changes in it. (??) (to understand more abt it)
 * Do's and Dont's for setState and State methods mentioned in the imnplementation above.
 * Summary for showing things to be cared about: (**Photo**)
+* Destructuring the props and state
+* Two ways of doing so:
+    * by changing the parameter props with required attributes, and
+    * by creating the constants of required properties
+* Event handling: using function (not using parentheses), not function call in both functions and classes components (can be used in setState thing, to be cared abt)
+* Binding Event

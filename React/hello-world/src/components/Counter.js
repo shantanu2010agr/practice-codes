@@ -1,4 +1,4 @@
-// Class Component
+// Understanding state, it's uses and it's modification in React 
 import React, {Component} from 'react'
 
 class Counter extends Component{

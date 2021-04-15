@@ -11,6 +11,8 @@ import Message from './components/Message'
 import Hello from './components/Hello'
 import HellonJSX from './components/HellonJSX'
 import Counter from './components/Counter';
+import FuncionClick from './components/FuncionClick';
+import ClassClick from './components/ClassClick';
 
 function App() {
   return (
@@ -31,6 +33,10 @@ function App() {
           Learn React
         </a>
       </header> */}
+
+      {/* Event handling */}
+      <FuncionClick />
+      <ClassClick />
       
       {/* Importing newly created component */}
       <Mine name="" heroName=""/>
